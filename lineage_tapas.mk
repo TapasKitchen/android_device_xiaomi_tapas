@@ -11,8 +11,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/tapas/device.mk)
 
 # Inherit some common Lineage stuff.
+TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# AxionOS
+AXION_CAMERA_REAR_INFO := 50,8,2
+AXION_CAMERA_FRONT_INFO := 13
+AXION_PROCESSOR := Snapdragon_685
 
 PRODUCT_NAME := lineage_tapas
 PRODUCT_DEVICE := tapas
